@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual India: Art, Culture and Identity Through Time</title>
+    <meta name="description" content="An Interactive Journey from the Indus Valley to India’s Living Folk Traditions">
+    
+    <!-- Fonts: Cormorant Garamond for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="landing-section">
+        <div class="landing-content">
+            <h1 class="landing-title">VISUAL INDIA</h1>
+            <h2 class="landing-subtitle">Art, Culture and Identity Through Time</h2>
+            <h3 class="landing-tagline">An Interactive Journey from the Indus Valley to India’s Living Folk Traditions</h3>
+            
+            <p class="landing-intro">
+                Across thousands of years, Indian artists transformed bronze, stone, pigments, paper and everyday walls into expressions of faith, power, community and identity. Explore this timeline to discover how the visual language of India evolved while continuing to preserve its cultural memory.
+            </p>
+            
+            <button id="begin-journey" class="btn-primary" aria-label="Scroll to timeline">
+                Begin the Journey
+            </button>
+            
+            <div class="hero-team-info">
+                <h4 class="hero-team-heading">PROJECT TEAM</h4>
+                <div class="hero-team-list">
+                    <div class="hero-team-member">
+                        <span class="hero-member-num">01</span>
+                        <span class="hero-member-name">SHIVANSH KANDWAL</span>
+                        <span class="hero-member-reg">RA2411003011363</span>
+                    </div>
+                    <div class="hero-team-member">
+                        <span class="hero-member-num">02</span>
+                        <span class="hero-member-name">SAUNDARYA SINGH</span>
+                        <span class="hero-member-reg">RA2411003011364</span>
+                    </div>
+                    <div class="hero-team-member">
+                        <span class="hero-member-num">03</span>
+                        <span class="hero-member-name">AYOSHRI DUTTA</span>
+                        <span class="hero-member-reg">RA2411003011376</span>
+                    </div>
+                    <div class="hero-team-member">
+                        <span class="hero-member-num">04</span>
+                        <span class="hero-member-name">TANMAY SHARMA</span>
+                        <span class="hero-member-reg">RA2411003011406</span>
+                    </div>
+                    <div class="hero-team-member">
+                        <span class="hero-member-num">05</span>
+                        <span class="hero-member-name">ARGHYADEEP DEB</span>
+                        <span class="hero-member-reg">RA2411003011429</span>
+                    </div>
+                </div>
+                <div class="hero-course-info">
+                    <div>COURSE &mdash; Indian Art Form</div>
+                    <div>SECTION &mdash; B2</div>
+                </div>
+            </div>
+        </div>
+        <div class="landing-ornament" aria-hidden="true" id="hero-image-container">
+            <img src="assets/images/padmapani.jpg" alt="Visual India Featured Artwork" id="hero-img">
+        </div>
+    </header>
+
+    <main>
+        <section id="timeline" class="timeline-section">
+            <!-- Dynamically populated by JS -->
+            <div class="timeline-line"></div>
+            <div id="timeline-container" class="timeline-container">
+                <!-- Timeline items go here -->
+            </div>
+        </section>
+
+        <section id="reflection" class="reflection-section">
+            <h2 class="section-title">Across Time, A Continuing Visual Language</h2>
+            <div class="reflection-content">
+                <p>
+                    Indian art changed dramatically across time—from the compact seals and bronzes of the Indus cities to Buddhist murals, Chola temple bronzes, Mughal manuscript painting and the living visual traditions of Mithila and Warli communities. Materials changed, patrons changed and the settings of art changed, yet many recurring concerns remained. Artists repeatedly explored relationships between human beings, nature, spirituality, power, community and memory. Some works served temples or monasteries, some shaped royal identity, while others belonged to domestic rituals and shared community life. Together, these traditions show that Indian art history is not a single continuous style. It is a collection of distinct visual languages responding to different societies and beliefs, connected by a persistent ability to turn material, line, gesture and symbol into cultural meaning.
+                </p>
+            </div>
+            
+            <div class="reflection-grid">
+                <div class="grid-cell">
+                    <span class="grid-label">INDUS VALLEY</span>
+                    <span class="grid-value">Craft & Identity</span>
+                </div>
+                <div class="grid-cell">
+                    <span class="grid-label">AJANTA</span>
+                    <span class="grid-value">Faith & Storytelling</span>
+                </div>
+                <div class="grid-cell">
+                    <span class="grid-label">CHOLA</span>
+                    <span class="grid-value">Devotion & Movement</span>
+                </div>
+                <div class="grid-cell">
+                    <span class="grid-label">MUGHAL</span>
+                    <span class="grid-value">Court & Power</span>
+                </div>
+                <div class="grid-cell">
+                    <span class="grid-label">MADHUBANI</span>
+                    <span class="grid-value">Ritual & Memory</span>
+                </div>
+                <div class="grid-cell">
+                    <span class="grid-label">WARLI</span>
+                    <span class="grid-value">Community & Nature</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="sources" class="sources-section">
+            <h2 class="section-title">SOURCES & IMAGE CREDITS</h2>
+            <div class="sources-table-wrapper">
+                <table class="sources-table">
+                    <thead>
+                        <tr>
+                            <th>Artifact</th>
+                            <th>Research Institution</th>
+                            <th>Image Source</th>
+                            <th>Image License / Usage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sources-tbody">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-project-info">
+                <h4>Visual India: Art, Culture and Identity Through Time</h4>
+                <p>Interactive Indian Art Timeline – CO1</p>
+                <p class="footer-note">Created as an educational exploration of Indian art history.</p>
+                <div class="footer-metadata">
+                    <div><span class="footer-label">COURSE</span> Indian Art Form</div>
+                    <div><span class="footer-label">SECTION</span> B2</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Detail View Modal -->
+    <div id="detail-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" aria-label="Close detail view">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-left">
+                    <div class="detail-image-container" id="detail-image-container">
+                        <!-- Image injected here -->
+                    </div>
+                </div>
+                <div class="detail-right">
+                    <div class="detail-top-label" id="detail-top-label">ARTIFACT 01 / 08</div>
+                    <h2 id="detail-title" class="detail-title"></h2>
+                    <h3 id="detail-artist" class="detail-artist"></h3>
+                    
+                    <hr class="detail-separator">
+                    
+                    <div class="detail-metadata">
+                        <div class="meta-row"><span class="meta-label">Tradition</span> <span class="meta-value" id="detail-tradition"></span></div>
+                        <div class="meta-row"><span class="meta-label">Date</span> <span class="meta-value" id="detail-date"></span></div>
+                        <div class="meta-row" id="row-location"><span class="meta-label">Location</span> <span class="meta-value" id="detail-location"></span></div>
+                        <div class="meta-row" id="row-material"><span class="meta-label">Material</span> <span class="meta-value" id="detail-material"></span></div>
+                        <div class="meta-row" id="row-dimensions"><span class="meta-label">Dimensions</span> <span class="meta-value" id="detail-dimensions"></span></div>
+                        <div class="meta-row" id="row-collection"><span class="meta-label">Collection</span> <span class="meta-value" id="detail-collection"></span></div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>MAIN DESCRIPTION</h3>
+                        <p id="detail-description"></p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>LOOK CLOSER</h3>
+                        <p id="detail-lookcloser"></p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>ART & IDENTITY</h3>
+                        <p id="detail-identity"></p>
+                    </div>
+                    
+                    <div class="detail-section box-section">
+                        <h3>WHAT WAS ART FOR?</h3>
+                        <p id="detail-purpose"></p>
+                    </div>
+
+                    <div class="detail-credit">
+                        <span class="meta-label">Image Credit:</span> <span id="detail-credit"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="prev-artifact" class="nav-btn">← Previous Artifact</button>
+                <button id="next-artifact" class="nav-btn">Next Artifact →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div id="zoom-modal" class="zoom-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="zoom-backdrop"></div>
+        <button class="zoom-close-btn" aria-label="Close zoom view">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="zoom-content">
+            <img id="zoomed-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
